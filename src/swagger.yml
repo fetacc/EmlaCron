@@ -1,0 +1,606 @@
+swagger: '2.0'
+host: 'api.emlalock.com'
+info:
+  description: Basic interactions with Emlalock API
+  version: '0.1'
+  title: Emlalock API
+paths:
+  '/add':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+        - name: value
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+  '/addmaximum':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+        - name: value
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+  '/addminimum':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+        - name: value
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+  '/addrequirement':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+        - name: value
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+  '/addrandom':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+        - name: from
+          in: query
+          required: false
+          type: string
+        - name: to
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+  '/addmaximumrandom':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+        - name: from
+          in: query
+          required: false
+          type: string
+        - name: to
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+  '/addminimumrandom':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+        - name: from
+          in: query
+          required: false
+          type: string
+        - name: to
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+  '/addrequirementrandom':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+        - name: from
+          in: query
+          required: false
+          type: string
+        - name: to
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+  '/info':
+    get:
+      produces:
+        - application/json
+      parameters:
+        - name: apikey
+          in: query
+          required: false
+          type: string
+        - name: userid
+          in: query
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Definition generated from Swagger Inspector
+          schema:
+            $ref: '#/definitions/Model'
+definitions:
+  Model_User_Visibilities:
+    properties:
+      userpagevisible:
+        type: integer
+        format: int64
+      sessionpagevisible:
+        type: integer
+        format: int64
+      feedpagevisible:
+        type: integer
+        format: int64
+      verificationvisible:
+        type: integer
+        format: int64
+      highscore:
+        type: integer
+        format: int64
+      profilepictures:
+        type: integer
+        format: int64
+      showholdersessiononprofile:
+        type: integer
+        format: int64
+  Model_User:
+    properties:
+      userid:
+        type: string
+      username:
+        type: string
+      lastclick:
+        type: integer
+        format: int64
+      subscriptionvalue:
+        type: integer
+        format: int64
+      financialinterests:
+        type: integer
+        format: int64
+      wearerrates:
+        type: integer
+        format: int64
+      wearerrating:
+        type: integer
+        format: int64
+      holderrates:
+        type: integer
+        format: int64
+      holderrating:
+        type: integer
+        format: int64
+      sessions:
+        type: integer
+        format: int64
+      failedsessions:
+        type: integer
+        format: int64
+      maxsession:
+        type: integer
+        format: int64
+      minsession:
+        type: integer
+        format: int64
+      sumsession:
+        type: integer
+        format: int64
+      membersince:
+        type: integer
+        format: int64
+      dateofbirth:
+        type: integer
+        format: int64
+      description:
+        type: string
+      gender:
+        type: integer
+        format: int64
+      language:
+        type: string
+      chastityrole:
+        type: integer
+        format: int64
+      timezone:
+        type: integer
+        format: int64
+      visibilities:
+        $ref: '#/definitions/Model_User_Visibilities'
+  Model_Chastitysession_Displaymode:
+    properties:
+      timepassed:
+        type: integer
+        format: int64
+      timeleft:
+        type: integer
+        format: int64
+      showapproximate:
+        type: integer
+        format: int64
+      surpriseme:
+        type: integer
+        format: int64
+  Model_Chastitysession_Games:
+    properties:
+      blackjack:
+        type: integer
+        format: int64
+      slotmachine:
+        type: integer
+        format: int64
+      bingo:
+        type: integer
+        format: int64
+      voting:
+        type: integer
+        format: int64
+      wheeloffortune:
+        type: integer
+        format: int64
+  Model_Chastitysession_Wheeloffortune:
+    properties:
+      duration:
+        type: string
+      operator:
+        type: string
+      color:
+        type: string
+      text:
+        type: string
+  Model_Chastitysession_Wheelofsessionend:
+    properties:
+      duration:
+        type: string
+      operator:
+        type: string
+      color:
+        type: string
+      text:
+        type: string
+  Model_Chastitysession:
+    properties:
+      chastitysessionid:
+        type: string
+      creatorid:
+        type: string
+      wearerid:
+        type: string
+      holderid:
+        type: string
+      inoneoercentrange:
+        type: boolean
+      status:
+        type: integer
+        format: int64
+      sessiontype:
+        type: integer
+        format: int64
+      interval:
+        type: integer
+        format: int64
+      keyword:
+        type: string
+      testsession:
+        type: integer
+        format: int64
+      feed:
+        type: integer
+        format: int64
+      friendlink:
+        type: integer
+        format: int64
+      reqlink:
+        type: integer
+        format: int64
+      offer:
+        type: integer
+        format: int64
+      minimumholderscore:
+        type: integer
+        format: int64
+      holdergender:
+        type: integer
+        format: int64
+      transfer:
+        type: integer
+        format: int64
+      holderfriendlink:
+        type: integer
+        format: int64
+      offeruserid:
+        type: string
+      requirements:
+        type: integer
+        format: int64
+      friendlinkadd:
+        type: integer
+        format: int64
+      friendlinksub:
+        type: integer
+        format: int64
+      reqlinkadd:
+        type: integer
+        format: int64
+      reqlinksub:
+        type: integer
+        format: int64
+      durationtype:
+        type: integer
+        format: int64
+      randomduration:
+        type: integer
+        format: int64
+      startduration:
+        type: integer
+        format: int64
+      minduration:
+        type: integer
+        format: int64
+      maxduration:
+        type: integer
+        format: int64
+      beatby:
+        type: integer
+        format: int64
+      specstartduration:
+        type: integer
+        format: int64
+      specminduration:
+        type: integer
+        format: int64
+      specmaxduration:
+        type: integer
+        format: int64
+      startweight:
+        type: integer
+        format: int64
+      targetweight:
+        type: integer
+        format: int64
+      displaymode:
+        $ref: '#/definitions/Model_Chastitysession_Displaymode'
+      withpenaltypenalty:
+        type: integer
+        format: int64
+      games:
+        $ref: '#/definitions/Model_Chastitysession_Games'
+      voting:
+        type: integer
+        format: int64
+      mustgamesperday:
+        type: integer
+        format: int64
+      mustgamesperiod:
+        type: integer
+        format: int64
+      gamesperday:
+        type: integer
+        format: int64
+      gamesperiod:
+        type: integer
+        format: int64
+      riscvoting:
+        type: integer
+        format: int64
+      description:
+        type: string
+      wheeloffortune:
+        type: array
+        items:
+          $ref: '#/definitions/Model_Chastitysession_Wheeloffortune'
+      hygieneopening:
+        type: integer
+        format: int64
+      cleaningsperday:
+        type: integer
+        format: int64
+      cleaningperiod:
+        type: integer
+        format: int64
+      timeforcleaning:
+        type: integer
+        format: int64
+      cleaningaction:
+        type: integer
+        format: int64
+      cleaningpenalty:
+        type: integer
+        format: int64
+      penaltygamesminimum:
+        type: integer
+        format: int64
+      startdate:
+        type: integer
+        format: int64
+      enddate:
+        type: integer
+        format: int64
+      canbeclosed:
+        type: boolean
+      playedgamesmust:
+        type: integer
+        format: int64
+      currentweight:
+        type: integer
+        format: int64
+      weightbalance:
+        type: integer
+        format: int64
+      lastverification:
+        type: integer
+        format: int64
+      cleanings:
+        type: integer
+        format: int64
+      lastweightupdate:
+        type: integer
+        format: int64
+      playedgames:
+        type: integer
+        format: int64
+      duration:
+        type: integer
+        format: int64
+      pictureby:
+        type: integer
+        format: int64
+      timeinlock:
+        type: integer
+        format: int64
+      created:
+        type: integer
+        format: int64
+      closedate:
+        type: integer
+        format: int64
+      incleaning:
+        type: integer
+        format: int64
+      cleaningstarted:
+        type: integer
+        format: int64
+      applyriskvoting:
+        type: integer
+        format: int64
+      timewithpenaltyfrom:
+        type: integer
+        format: int64
+      timewithpenaltyto:
+        type: integer
+        format: int64
+      endtype:
+        type: integer
+        format: int64
+      wheelofsessionend:
+        type: array
+        items:
+          $ref: '#/definitions/Model_Chastitysession_Wheelofsessionend'
+      pillory:
+        type: integer
+        format: int64
+      pilloryleft:
+        type: integer
+        format: int64
+      pillorymessage:
+        type: string
+      pillorypenalty:
+        type: integer
+        format: int64
+      wearerrating:
+        type: integer
+        format: int64
+      holderrating:
+        type: integer
+        format: int64
+      percentageperperiod:
+        type: integer
+        format: int64
+      percentageperiod:
+        type: integer
+        format: int64
+      chance:
+        type: integer
+        format: int64
+  Model:
+    properties:
+      user:
+        $ref: '#/definitions/Model_User'
+      chastitysession:
+        $ref: '#/definitions/Model_Chastitysession'
+  
